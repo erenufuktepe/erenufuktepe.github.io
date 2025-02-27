@@ -7,6 +7,11 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
 }
+hr {
+    width: clamp(10%, 50vw, 200%);
+    margin: 20px 0; 
+    border: 1.5px solid #333; 
+}
 .navbar {
     display: flex;
     flex-direction: column;
@@ -17,16 +22,35 @@ body {
     left: 0;
     top: 0;
     height: 100%;
-    width: 450px;
+    width: clamp(300px, 50vw, 450px);
     color: white;
 }
 .logo img {
-    width: 250px;
-    height: 250px;
+    width: clamp(10px, 50vw, 250px);
+    height: clamp(10px, 50vw, 250px);
     border-radius: 50%;
     object-fit: cover;
     margin-top: 80px;
+}
+.web-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
     margin-bottom: 80px;
+}
+.web-links li {
+    margin: 3px;
+}
+.web-links a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+.web-links a:hover {
+    color: grey;
 }
 .nav-links {
     list-style: none;
@@ -48,6 +72,5 @@ body {
 }
 .content {
     margin-left: 500px;
-    margin-right: 200px;
     padding: 20px;
 }
