@@ -7,11 +7,6 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
 }
-hr {
-    width: clamp(10%, 50vw, 200%);
-    margin: 20px 0; 
-    border: 1.5px solid #333; 
-}
 .navbar {
     display: flex;
     flex-direction: column;
@@ -71,6 +66,66 @@ hr {
     text-decoration: underline;
 }
 .content {
-    margin-left: 500px;
-    padding: 20px;
+    margin-left: clamp(10px, 50vw, 500px); /* Ensure this matches or exceeds navbar width */
+    padding: 50px;
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    position: relative; /* Ensure content stays on top */
+    z-index: 1; /* Higher than navbar if needed */
+}
+.content-item {
+    border-top: 2.5px solid #333;
+    margin-top: 50px;
+    padding-top: 50px;
+}
+.school, .work-experience {
+    margin-top: 35px;
+}
+.school *, .work-experience * {
+    margin: 7.5px;
+}
+.school li, .work-experience li {
+    margin: 15px;
+}
+.school p, .work-experience p {
+    font-style: italic;
+    color: grey;
+}
+.work-experience {
+    margin-top: 35px;
+}
+
+
+
+.nav-content {
+    margin: 5px;
+}
+.nav-item {
+    border-top: 1.5px solid white;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 15px;
+    padding-top: 20px;
+}
+.nav-item h2 {
+    font-size: larger;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        width: 150px;
+    }
+    .logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 50px;
+    }
+    .content {
+        margin-left: 170px;
+        width: calc(100% - 170px);
+        padding: 15px;
+    }
 }
