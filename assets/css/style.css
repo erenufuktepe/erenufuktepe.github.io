@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 1px;
 }
 body {
     font-family: Arial, sans-serif;
@@ -34,7 +35,6 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 80px;
 }
 .web-links li {
     margin: 3px;
@@ -95,11 +95,12 @@ body {
 .work-experience {
     margin-top: 35px;
 }
-
-
-
 .nav-content {
     margin: 5px;
+    overflow-y: auto
+}
+.nav-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for cleaner look */
 }
 .nav-item {
     border-top: 1.5px solid white;
@@ -111,6 +112,23 @@ body {
 .nav-item h2 {
     font-size: larger;
     margin-bottom: 15px;
+}
+.summary {
+    padding-bottom: 15px;
+}
+.skills li {
+    font-weight: bolder;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.contact {
+    margin-bottom: 20px;
+    font-size: smaller;
+}
+.contact li{
+    margin: 15px;
+    list-style: none;
+    text-align: center;
 }
 @media (max-width: 768px) {
     .navbar {
