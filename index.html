@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eren Ufuktepe — MLOps Engineer</title>
+    <meta name="description" id="meta-description" content="Eren Ufuktepe — Software engineer working on backend, data and ML platforms. Currently an MLOps Engineer at Veterans United Home Loans.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://erenufuktepe.github.io/">
+
+    <!-- Link previews (LinkedIn, Slack, etc.) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Eren Ufuktepe — MLOps Engineer">
+    <meta property="og:description" content="Software engineer working on backend, data and ML platforms.">
+    <meta property="og:url" content="https://erenufuktepe.github.io/">
+    <meta property="og:image" content="https://erenufuktepe.github.io/assets/img/profile.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <script>
+        // Apply the saved theme before first paint to avoid a light/dark flash.
+        (function () {
+            var pref = 'system';
+            try { pref = localStorage.getItem('theme') || 'system'; } catch (e) {}
+            var dark = pref === 'dark' ||
+                (pref === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+            document.documentElement.dataset.themePref = pref;
+        })();
+    </script>
+    <link rel="icon" id="favicon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <img src="assets/img/profile.jpg" alt="Photo of Eren Ufuktepe" width="128" height="128">
+            <h1 id="name"></h1>
+            <p class="job-title" id="job-title"></p>
+            <div class="social-links" id="social-links"></div>
+            <div id="contact-info"></div>
+            <div class="theme-switch" role="group" aria-label="Color theme">
+                <button type="button" data-theme-choice="system" aria-pressed="false"><i class="fa-solid fa-desktop"></i>System</button>
+                <button type="button" data-theme-choice="light" aria-pressed="false"><i class="fa-solid fa-sun"></i>Light</button>
+                <button type="button" data-theme-choice="dark" aria-pressed="false"><i class="fa-solid fa-moon"></i>Dark</button>
+            </div>
+        </div>
+
+        <div class="sidebar-sections">
+            <div class="sidebar-section">
+                <h2>NAVIGATE</h2>
+                <nav class="sidebar-nav" aria-label="Sections">
+                    <a href="#about" class="nav-link">
+                        <i class="fa-solid fa-user"></i>
+                        About
+                    </a>
+                    <a href="#experience" class="nav-link">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Work Experience
+                    </a>
+                    <a href="#projects" class="nav-link">
+                        <i class="fa-solid fa-code"></i>
+                        Projects
+                    </a>
+                    <a href="#education" class="nav-link">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Education
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-section" id="sidebar-skills"></div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <div class="load-error" id="load-error" hidden>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>Couldn't load resume content. Please refresh the page, or find me on
+               <a href="https://www.linkedin.com/in/eren-ufuktepe-a20081145/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        </div>
+
+        <section class="content-section" id="about">
+            <h2><i class="fa-solid fa-user"></i>About</h2>
+            <div class="about-card">
+                <p id="intro-summary"></p>
+            </div>
+        </section>
+
+        <section class="content-section" id="experience">
+            <h2><i class="fa-solid fa-briefcase"></i>Work Experience</h2>
+            <div id="experience-entries"></div>
+        </section>
+
+        <section class="content-section" id="projects">
+            <h2><i class="fa-solid fa-code"></i>Projects</h2>
+            <ul class="project-list" id="project-entries"></ul>
+        </section>
+
+        <section class="content-section" id="education">
+            <h2><i class="fa-solid fa-graduation-cap"></i>Education</h2>
+            <div id="education-entries"></div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

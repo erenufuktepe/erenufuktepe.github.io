@@ -1,0 +1,261 @@
+{
+  "personal": {
+    "name": "Eren Ufuktepe",
+    "title": "MLOps Engineer",
+    "location": "Columbia, MO",
+    "linkedin": "https://www.linkedin.com/in/eren-ufuktepe-a20081145/",
+    "github": "https://github.com/erenufuktepe"
+  },
+  "summary": "Software engineer with 6+ years across mortgage lending, healthcare and banking, currently an MLOps Engineer. Works primarily in Java and Python, combining backend services and APIs with data pipelines and warehouses on Databricks and Snowflake, plus front-end work in React. Today builds live scoring services and deploys data scientists’ models to production on on-premises Kubernetes and Docker, after earlier work on Azure and AWS.",
+  "skills": [
+    {
+      "category": "Languages",
+      "items": [
+        "Python",
+        "Java",
+        "C#",
+        "SQL",
+        "JavaScript"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Spring Boot",
+        "FastAPI",
+        ".NET",
+        "Hibernate",
+        "React",
+        "React Native",
+        "JUnit",
+        "Mockito"
+      ]
+    },
+    {
+      "category": "Data Platforms",
+      "items": [
+        "Apache Spark (PySpark)",
+        "pandas",
+        "Databricks (DLT, Unity Catalog)",
+        "Azure Data Factory",
+        "Snowflake"
+      ]
+    },
+    {
+      "category": "ML Platforms",
+      "items": [
+        "Seldon",
+        "MLflow",
+        "Feast"
+      ]
+    },
+    {
+      "category": "Databases & Messaging",
+      "items": [
+        "MS SQL Server",
+        "PostgreSQL",
+        "Oracle Database",
+        "Redis",
+        "RabbitMQ",
+        "AWS SQS"
+      ]
+    },
+    {
+      "category": "Infrastructure & DevOps",
+      "items": [
+        "Kubernetes",
+        "Docker",
+        "Azure",
+        "AWS (Lambda, CloudWatch)",
+        "Jenkins",
+        "Gradle",
+        "Datadog",
+        "Grafana"
+      ]
+    },
+    {
+      "category": "Practices",
+      "items": [
+        "Microservices",
+        "REST APIs",
+        "ETL Pipelines",
+        "Medallion Architecture",
+        "CI/CD",
+        "TDD",
+        "Model Deployment & Monitoring",
+        "HL7 FHIR",
+        "PCORnet CDM"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Missouri-Columbia",
+      "initials": "MU",
+      "degree": "M.Sc. in Data Science and Analytics",
+      "startDate": "Aug 2020",
+      "endDate": "May 2022",
+      "highlights": [
+        "GPA 3.97/4.0",
+        "Emphasis: High-Performance Computing.",
+        "Capstone: predicted hypertension risk from simple lifestyle factors."
+      ]
+    },
+    {
+      "institution": "Izmir Institute of Technology",
+      "initials": "IYTE",
+      "degree": "B.Sc. in Computer Engineering",
+      "startDate": "Oct 2016",
+      "endDate": "Jan 2020",
+      "highlights": [
+        "Thesis: eye-tracking system for ALS patients, built in C++ with openFrameworks."
+      ]
+    },
+    {
+      "institution": "Izmir University of Economics",
+      "initials": "IUE",
+      "degree": "B.Sc. in Software Engineering",
+      "startDate": "Sep 2014",
+      "endDate": "Jun 2016",
+      "highlights": [
+        "Transferred to Izmir Institute of Technology."
+      ],
+      "collapsed": true
+    }
+  ],
+  "experience": [
+    {
+      "company": "Veterans United Home Loans",
+      "initials": "VU",
+      "role": "MLOps Engineer",
+      "location": "Columbia, MO",
+      "startDate": "Aug 2025",
+      "endDate": "Present",
+      "current": true,
+      "highlights": [
+        "Reduced p95 latency of the lead queue, which has served **over a million lead requests** from loan officers, **from 22 seconds to about 500 ms** by switching its core MS SQL Server stored procedure from table-level to row-level locking and reworking the jobs that lock, release and decay leads to prevent deadlocks.",
+        "Own the lead queue, an MS SQL Server and Redis system that routes the best-matched lead to each loan officer across multiple queues; optimize and stabilize it while building new features, lead its production releases, and monitor it with Grafana dashboards and alerts.",
+        "**Built a real-time service from scratch** that scores each loan opportunity’s chance of closing at every remaining milestone, from pre-qualification through closing. It reads live events from RabbitMQ, serves scores through FastAPI, and decays each score over time.",
+        "Set up the service’s data flow, keeping live data in MS SQL Server and moving historical data to Snowflake to take load off the operational database; transformed data with pandas and PySpark and logged live features to Snowflake through Feast.",
+        "**Deploy model microservices with Seldon** as Docker containers on Kubernetes through the CI/CD pipeline, including several scoring models developed by a data scientist; test and validate each model version registered in MLflow before release, and help data scientists get their models deployed."
+      ]
+    },
+    {
+      "company": "Oracle",
+      "initials": "OR",
+      "role": "Software Engineer II",
+      "location": "Columbia, MO",
+      "startDate": "Dec 2023",
+      "endDate": "Aug 2025",
+      "current": false,
+      "highlights": [
+        "**Cut Databricks compute costs by about $10,000/month** by optimizing PySpark notebooks and the Azure Data Factory (ADF) pipelines that feed them.",
+        "Built and refactored ADF and Python ETL pipelines for multiple projects, cutting the longest-running jobs **from about 7 hours to 2** and sharply reducing daily pipeline failures.",
+        "Built Snowflake ETL pipelines for a healthcare research group that map source data into the PCORnet Common Data Model, a standard format for clinical research data.",
+        "Built Delta Live Tables (DLT) pipelines that refine data through bronze, silver and gold layers (medallion architecture) in the Databricks warehouse used by analysts and data scientists, plus a CI/CD pipeline for deploying their Databricks code.",
+        "**Migrated Databricks workspaces and the Hive metastore to Unity Catalog**, managed access permissions such as limiting cluster use to set hours, and trained teammates on ADF and Databricks best practices.",
+        "Built a single-page app for the security team with React and C#/.NET Azure Functions, using Microsoft Graph APIs to monitor suspicious user activity."
+      ]
+    },
+    {
+      "company": "Columbia Insurance Group",
+      "initials": "CIG",
+      "role": "Full Stack Developer",
+      "location": "Columbia, MO",
+      "startDate": "Oct 2023",
+      "endDate": "Dec 2023",
+      "current": false,
+      "highlights": [
+        "Fixed bugs in legacy Java web applications and a React web app, added features to the React app, and updated the AWS Lambda functions behind its APIs."
+      ]
+    },
+    {
+      "company": "ZoomCare",
+      "initials": "ZC",
+      "role": "Software Engineer",
+      "location": "Remote",
+      "startDate": "Feb 2022",
+      "endDate": "Sep 2023",
+      "current": false,
+      "highlights": [
+        "Helped migrate the core electronic medical record (EMR) system from a **monolithic Java application on JBoss to Spring Boot microservices** on Tomcat.",
+        "When the company switched payment vendors, **designed and built the new payment database**, migrated the existing data into it, and built a new microservice for the vendor’s APIs.",
+        "Built a Spring Boot microservice that shares data with Health Gorilla, a health data network, using HL7 FHIR and AWS SQS, plus a Python script to send historical data.",
+        "Added features to the company’s web and mobile apps using React and React Native.",
+        "Across all services, used PostgreSQL with Hibernate for data access, practiced test-driven development (TDD), and monitored production with AWS CloudWatch and Datadog."
+      ]
+    },
+    {
+      "company": "Cerner Corporation",
+      "initials": "CE",
+      "role": "Software Engineer",
+      "location": "Remote",
+      "startDate": "Aug 2020",
+      "endDate": "Feb 2022",
+      "current": false,
+      "highlights": [
+        "**Built a Snowflake data warehouse** for University of Missouri Health Care’s research group, mapping its EMR and billing data into the PCORnet Common Data Model, the standard format for clinical research.",
+        "Developed custom ETL pipelines in Databricks (PySpark) and Azure Data Factory for individual researchers and outside vendors.",
+        "Extended an internal C# request management system with new features."
+      ]
+    },
+    {
+      "company": "Dynamic Medical Management Solutions",
+      "initials": "DM",
+      "role": "Software Development Intern",
+      "location": "Columbia, MO",
+      "startDate": "Jul 2020",
+      "endDate": "Aug 2020",
+      "current": false,
+      "highlights": [
+        "Built Docker images to support the migration of internal data systems from Redis to PostgreSQL.",
+        "Developed and tested backend APIs in PHP, including unit tests to ensure reliability and consistency in reporting data.",
+        "Used Bash scripting to automate manual data handling tasks and streamline internal deployment workflows."
+      ],
+      "collapsed": true
+    },
+    {
+      "company": "Softtech",
+      "initials": "ST",
+      "role": "Software Engineer",
+      "location": "Istanbul, Turkey",
+      "startDate": "Jul 2019",
+      "endDate": "Feb 2020",
+      "current": false,
+      "highlights": [
+        "Added features to a COBOL core-banking system for a bank’s London branch, and worked on an Open Banking integration in Java and Spring Boot.",
+        "Joined an urgent, business-critical project to build a document management microservice in Spring Boot and Hibernate, writing most of its unit tests and working on its Vue.js front end."
+      ]
+    },
+    {
+      "company": "Vestel",
+      "initials": "VE",
+      "role": "Intern",
+      "location": "Manisa, Turkey",
+      "startDate": "Jul 2018",
+      "endDate": "Aug 2018",
+      "current": false,
+      "highlights": [
+        "Designed and implemented a web application to visualize real-time test results from the smartphone production line, supporting operational quality control.",
+        "Developed the solution using C#, ASP.NET MVC, and Entity Framework; integrated with an MS SQL database for data persistence and live reporting.",
+        "Collaborated with engineers in the Smart Systems Test Development department to align application functionality with production workflows."
+      ],
+      "collapsed": true
+    },
+    {
+      "company": "ESB Software and Information Technologies",
+      "initials": "ESB",
+      "role": "Volunteer",
+      "location": "Izmir, Turkey",
+      "startDate": "Oct 2017",
+      "endDate": "Feb 2018",
+      "current": false,
+      "highlights": [
+        "Contributed to the development of \"Kosi Web\", a no-code platform that allows users to create and publish websites without programming experience.",
+        "Implemented backend and frontend components using PHP, HTML, CSS, JavaScript, and MySQL.",
+        "Gained hands-on experience in full-stack web development while collaborating with a small agile team."
+      ],
+      "collapsed": true
+    }
+  ]
+}

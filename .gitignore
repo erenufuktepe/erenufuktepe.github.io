@@ -1,0 +1,27 @@
+# Personal files
+resume.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Logs / temp
+*.log
+*.tmp
+
+# Node (if tooling added later)
+node_modules/
+
+# Source / backup images not used by the site
+assets/img/profile.png
+assets/img/_profile.jpg
